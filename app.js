@@ -1,9 +1,4 @@
-var firstname = 'Christy';
+var greet = require('./greet'); // extension '.js' is inferred. if not found, will look for folder with index.js
 
-(function (lastname) {
-    'use strict';
-    var firstname = 'Elise';
-    console.log('IIFE name: ' + firstname + ' ' + lastname);
-}('Linn'));
-
-console.log('Global name: ' + firstname);
+greet.english();
+greet.spanish();
