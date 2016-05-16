@@ -1,25 +1,37 @@
-var elise, christy;
+var a, c;
 
-function Person(obj) {
+// this function wants a primitive value
+function changePrimitive(b) {
     'use strict';
-    this.first = obj.first;
-    this.last = obj.last;
+    b = 2;
 }
 
-Person.prototype.greet = function () {
+a = 1;
+
+// we feed the function a primitive value
+changePrimitive(a);
+
+// still 1! passed by value
+console.log(a);
+
+
+// now time for some pass by reference...
+
+// this function wants a complex value
+function changeComplex(d) {
     'use strict';
-    console.log('Hello, ' + this.first + ' ' + this.last);
-};
+    d.prop1 = function () {};
+    d.prop2 = {};
+}
 
-elise = new Person({
-    first: 'Elise',
-    last: 'Linn'
-});
+// c is an empty object
+c = {};
 
-christy = new Person({
-    first: 'Christy',
-    last: 'Linn'
-});
+// c.prop1 is an empty object
+c.prop1 = {};
 
-elise.greet();
-christy.greet();
+// now pass by reference to the hungry function
+changeComplex(c);
+
+// lo and behold, it is now a function because it was passed by reference
+console.log(c);
