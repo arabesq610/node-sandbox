@@ -1,8 +1,9 @@
+var firstname = 'Global Elise';
+
 (function () {
     'use strict';
     var firstname = 'IIFE Elise';
-    console.log(firstname);
+    console.log('firstname', firstname);
 }());
 
-var firstname = 'Global Elise';
 console.log(firstname);
