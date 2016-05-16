@@ -1,4 +1,4 @@
-var greet = require('./greet'); // extension '.js' is inferred. if not found, will look for folder with index.js
-
-greet.english();
-greet.spanish();
+var greet = require('./greet1');
+var greet2 = require('./greet2').greet;
+greet();
+greet2();
