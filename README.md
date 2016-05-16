@@ -21,7 +21,6 @@ What does Javascript need to manage stuff on the server?
 * github nodejs/node.git
 `$ git clone git@github.com:nodejs/node.git`
 
-3.13 The JavaScript Core
-------------------------
-
+3.15 Use it
+-----------
 
