@@ -1,35 +1,3 @@
-var greet1 = require('./greet1');
-greet1();
-
-///////////////////////////////////////////////////////////////////////////////
-
-var greet2 = require('./greet2').greet;
-greet2();
-
-///////////////////////////////////////////////////////////////////////////////
-
-var greet3 = require('./greet3');
-greet3.greet();
-
-greet3.greeting = 'New and improved greeting';
-
-///////////////////////////////////////////////////////////////////////////////
-
-// watch out! this one is just pointing to the same location in memory as greet3 because it caches the module
-var greet3b = require('./greet3');
-// will reflect the changed value of greet3.greeting
-greet3b.greet();
-
-///////////////////////////////////////////////////////////////////////////////
-
-var greet4 = require('./greet4');
-var greeter = new greet4();
-greeter.greet();
-
-///////////////////////////////////////////////////////////////////////////////
-
-// reveaing module pattern
-var greet5 = require('./greet5').greet;
-greet5();
-
-///////////////////////////////////////////////////////////////////////////////
+var greet = require('./greet1');
+var greet2 = require('./greet2');
+greet2.greet();
