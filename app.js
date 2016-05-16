@@ -1,10 +1,25 @@
-var person = {
-    firstname: 'Elise',
-    lastname: 'Linn',
-    greet: function () {
-        console.log('Hello, ' + this.firstname + ' ' + this.lastname + '.');
-    }
+var elise, christy;
+
+function Person(obj) {
+    'use strict';
+    this.first = obj.first;
+    this.last = obj.last;
+}
+
+Person.prototype.greet = function () {
+    'use strict';
+    console.log('Hello, ' + this.first + ' ' + this.last);
 };
 
-person.greet();
-console.log('What\'s that person\'s first name again? ' + person['firstname']);
+elise = new Person({
+    first: 'Elise',
+    last: 'Linn'
+});
+
+christy = new Person({
+    first: 'Christy',
+    last: 'Linn'
+});
+
+elise.greet();
+christy.greet();
