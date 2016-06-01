@@ -1,3 +1,4 @@
-4.28 Requiring Native (Core) Modules 
-====================================
+5.33 Node event emitter
+=======================
 
+A very simple event emitter.
